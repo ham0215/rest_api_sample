@@ -1,0 +1,70 @@
+openapi: 3.0.0
+
+info:
+  title: example
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3009/{api_version}
+    description: local server
+    variables:
+      api_version:
+        default: 'v1'
+        enum:
+          - 'v1'
+
+components:
+  schemas:
+    User:
+      type: object
+      description: user
+      required: [id, email, name]
+      properties:
+        id:
+          type: integer
+          description: user id
+        email:
+          type: string
+          format: email
+          description: email address
+        name:
+          type: string
+          description: name
+    Users:
+      type: array
+      description: users
+      items:
+        $ref: '#/components/schemas/User'
+
+paths:
+  /users/:
+    get:
+      tags: [user]
+      security:
+        - auth: []
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Users'
+  /users/{id}:
+    get:
+      tags: [user]
+      security:
+        - auth: []
+      parameters:
+        - in: path
+          name: id
+          description: user_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
