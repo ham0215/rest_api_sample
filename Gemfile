@@ -32,6 +32,7 @@ group :development, :test do
   gem 'rspec-rails'
 
   gem 'brakeman', require: false
+  gem 'rubocop', require: false
 end
 
 group :development do
