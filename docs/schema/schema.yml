@@ -40,7 +40,7 @@ components:
         $ref: '#/components/schemas/User'
 
 paths:
-  /users/:
+  /v1/users/:
     get:
       tags: [user]
       security:
@@ -52,7 +52,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Users'
-  /users/{id}:
+  /v1/users/{id}:
     get:
       tags: [user]
       security:
