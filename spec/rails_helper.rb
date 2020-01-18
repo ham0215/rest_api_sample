@@ -62,4 +62,8 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.include FactoryBot::Syntax::Methods
+
+  config.include Committee::Rails::Test::Methods
+  config.add_setting :committee_options
+  config.committee_options = { schema_path: Rails.root.join('docs', 'schema', 'schema.yml').to_s }
 end
