@@ -26,3 +26,10 @@ Add chrome extension.
 https://chrome.google.com/webstore/detail/swagger-viewer/nfmkaonpdmaglhjjlggfhlndofdldfag
 
 Open yaml on github.
+
+# request spec
+
+`assert_schema_conform` checks that interface matches openapi definition.
+
+ref
+https://github.com/willnet/committee-rails
