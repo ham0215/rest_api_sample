@@ -17,3 +17,10 @@ This application work on docker.
 # build and start in background.
 docker-compose up -d --build
 ```
+
+# openapi document
+
+Add chrome extension.
+https://chrome.google.com/webstore/detail/swagger-viewer/nfmkaonpdmaglhjjlggfhlndofdldfag
+
+Open yaml on github.
