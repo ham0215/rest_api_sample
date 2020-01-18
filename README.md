@@ -3,7 +3,7 @@
 This is rails application for rest api.
 The api documentation uses OpenAPI 3.
 
-![](https://github.com/ham0215/rest_api_sample/workflows/ruby/badge.svg)
+![](https://github.com/ham0215/rest_api_sample/workflows/Ruby/badge.svg)
 
 # rails new
 
